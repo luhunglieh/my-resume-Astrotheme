@@ -6,6 +6,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: "https://astro-resume-theme.netlify.app",
+  site: "https://luhunglieh.github.io",
+  base: "/my-resume-Astrotheme",
   integrations: [tailwind(), icon(), mdx(), sitemap()]
 });
