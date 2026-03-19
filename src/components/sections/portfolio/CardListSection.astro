@@ -6,9 +6,12 @@ interface Item {
   sub_title: string;
   years: string;
   details?: string;
+  youtubeId?: string;
+  alignRight?: boolean;
+  rowSpan?: number;
 }
 
-const { title, items } = Astro.props;
+const { title, items, stretchCards = false } = Astro.props;
 ---
 
 <section class="py-14 bg-background">
@@ -17,13 +20,17 @@ const { title, items } = Astro.props;
         {title}
     </h2>
 
-    <ul class="space-y-8">
+    <ul class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       {items.map((item: Item) => (
         <CardListItem
           title={item.title}
           sub_title={item.sub_title}
           years={item.years}
           details={item?.details}
+          youtubeId={item?.youtubeId}
+          alignRight={item?.alignRight}
+          stretchCards={stretchCards}
+          rowSpan={item?.rowSpan}
         />
       ))}
     </ul>

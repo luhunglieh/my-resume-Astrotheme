@@ -1,67 +1,85 @@
 {
     "basic": {
-        "name": "Paul Smith",
-        "job": "Software Engineer",
-        "summary": "Transforming challenges into opportunities with cutting-edge technology. Driven by a love for elegant, robust code.",
-        "cv_file_name": "paul_cv.pdf"
+        "name": "呂鴻烈, HENRY LU",
+        "job": "端詳互動資訊總監 / 臺北市人工智慧產業工會理事長",
+        "summary": "端詳互動資訊總監，專注於資訊服務、AI 應用規劃與數據分析\n臺北市人工智慧產業工會理事長，致力於推動 AI 產業落地\n曾職於遊戲橘子(6180) 10 餘年，主導核心系統全球導入與建置\n擁有 ISO27001、CISSP、ITIL等多項資安與資管認證",
+        "cv_file_name": "cv.pdf"
     },
     "experiences": [
         {
-            "title": "Senior Software Engineer",
-            "sub_title": "Tech Solutions Inc.",
-            "years": "2021 - Present",
-            "details": "Led the development of a scalable e-commerce platform that increased sales by 30%. Worked with modern technologies including React, Node.js, and AWS."
+            "title": "合夥人暨總監",
+            "sub_title": "端詳互動資訊",
+            "years": "民國 105 年 - 迄今",
+            "details": "• 提供專業資訊評估與服務、AI 應用規劃、數據分析及客製化專案開發\n• 自有商品：Amazon 北美汽配品牌營運、自有專利 QR code 防偽與售後服務\n• 技術顧問：台灣金服(法拍業務)、八百金科技長\n• 公務機構：國產署、合庫人壽系統維運\n• 業界專案：商周集團戰情中心整合、(蘇州)錦祥紡織智能工廠電商、肯瑪動力電商、安聯人壽旅平險平台\n• 農業 AI：臺灣藍鵲茶/石虎米 Agri-AI 導入 (與台灣人工智慧學校合作)"
         },
         {
-            "title": "Software Engineer",
-            "sub_title": "Innovate Labs",
-            "years": "2018 - 2021",
-            "details": "Developed and maintained web applications for various clients. Key contributor in migrating legacy systems to cloud infrastructure."
+            "title": "理事長",
+            "sub_title": "臺北市人工智慧產業工會",
+            "years": "民國 113 年 - 迄今",
+            "details": "• 協助臺北市政府推動 AI 產業落地應用\n• 維護 AI 新科技衝擊下的勞動權益\n• 推廣企業數位轉型，兼顧社會與科技平衡發展"
         },
         {
-            "title": "Junior Developer",
-            "sub_title": "Creative Apps Studio",
-            "years": "2015 - 2018",
-            "details": "Worked on mobile app development, collaborating with design teams to create user-friendly applications."
+            "title": "資深資訊經理",
+            "sub_title": "遊戲橘子 (6180) 總管理處",
+            "years": "民國 91 年 - 105 年",
+            "details": "• 服務 10 餘年，負責集團資訊總稽核\n• 主導集團 IFRS 轉換、BI 報表中心、RFS 預算費用預測與 BSC 平衡計分卡\n• 執行中和核心機房、全球網路伺服器群建構工程\n• 全球公司導入集團 ERP (財務、配銷、人資) 與 Workflow 跨國 Rollout\n• 關鍵產品：bf! Mobile app 入口、PlaySAFE 數位安全卡"
         }
     ],
     "education": [
         {
-            "title": "Bachelor of Science in Computer Science",
-            "sub_title": "University of Modern Tech",
-            "years": "2015 - 2019",
-            "details": "Graduated with honors. Specialized in software development, data structures, and algorithms. Worked on various open-source projects and completed internships in tech companies."
+            "title": "碩士學分班",
+            "sub_title": "國立臺灣大學 MBA",
+            "years": "民國 97 年",
+            "details": "• 專業經理人進修課程\n• 專注於策略管理、組織領導與企業財務分析"
         },
         {
-            "title": "Master of Science in Software Engineering",
-            "sub_title": "Global Tech Institute",
-            "years": "2019 - 2021",
-            "details": "Focused on advanced algorithms, cloud computing, and full-stack development. Published research papers on scalable microservices architecture."
+            "title": "土木研究所 數值計算組 碩士",
+            "sub_title": "國立臺灣大學",
+            "years": "民國 89 年",
+            "details": "• 深入研究數值分析與高效能平行運算\n• 奠定資深 IT 職涯所需的嚴謹邏輯基礎"
         }
     ],
-    "projects": [
+    "affairs": [
         {
-            "imageUrl": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?q=80&w=764&auto=format&fit=crop",
-            "title": "hello.com",
-            "type": "Website",
-            "link": "https://github.com/wasutz/astro-resume-theme"
+            "title": "外貿協會創新中心 國家 AI 形象專訪",
+            "sub_title": "Impressive! TAIWAN The Future of Interaction",
+            "years": "專訪",
+            "details": "• 主題: Taiwan's AI in Action\n• 探討 AI 互動技術的未來發展與台灣地位",
+            "youtubeId": "LfV4yVY2dUY",
+            "rowSpan": 2
         },
         {
-            "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=764&auto=format&fit=crop",
-            "title": "Paul UI kit collections",
-            "type": "UI Kit",
-            "link": "https://github.com/wasutz/astro-resume-theme"
+            "title": "財政部 專家專題演講",
+            "sub_title": "數位轉型的未來將走向 AI",
+            "years": "專題演講",
+            "details": "• 分享數位轉型與 AI 技術結合對產業與組織發展的衝擊\n• 提出因應新科技潮流的戰略規劃建議",
+            "alignRight": true
         },
         {
-            "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=764&auto=format&fit=crop",
-            "title": "paul.com",
-            "type": "Website",
-            "link": "https://github.com/wasutz/astro-resume-theme"
+            "title": "中經院 專訪與人力資源訪談",
+            "sub_title": "臺美 21 世紀貿易倡議下 AI 之衝擊",
+            "years": "專家專訪",
+            "details": "• 針對臺美貿易倡議下的 AI 技術影響進行深度解析\n• 分享台灣人力資源議題的專家見解",
+            "alignRight": true
+        }
+    ],
+    "growth": [
+        {
+            "title": "領導力與組織管理",
+            "sub_title": "哈佛企管 / 黃金階梯",
+            "years": "專業進修",
+            "details": "• 哈佛企管：建立和諧夥伴關係、中高階工作管理\n• 黃金階梯：專案管理與領導、問題探索與決策流程\n• 更多課程：高效面談、非財務主管財務診斷、共好(Gung-Ho)"
+        },
+        {
+            "title": "資安、架構與工程認證",
+            "sub_title": "KPMG / 資策會 / 翔威國際",
+            "years": "專業認證",
+            "details": "• 管理認證：ISO 27001 (BS7799) Lead Auditor, ITIL, CISSP\n• 技術架構：UML 物件導向設計、Oracle 9i/6i、ERP EBS11\n• 軟體工程：CMM, PSP, TSP, ISO9001, WebLoad 性能測試"
         }
     ],
     "menuItems": [
         {
-            "name": "About",
+            "name": "關於我",
             "link": "/"
         },
         {
@@ -72,7 +90,7 @@
     "socialLinks": [
         {
             "iconName": "Github",
-            "link": "https://github.com/wasutz/astro-resume-theme"
+            "link": "https://github.com"
         },
         {
             "iconName": "Facebook",

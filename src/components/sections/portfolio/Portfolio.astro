@@ -1,26 +1,37 @@
 ---
 import Project from '../Project.astro';
+import YouTubeEmbed from '../YouTubeEmbed.astro';
 import { projects } from '../../../config/cv.json';
 ---
 
-<section class="bg-background">
-    <div class="container px-6 py-8 mx-auto">
-        <h1 class="text-3xl font-semibold text-center capitalize lg:text-4xl">
-            My Portfolio
+<section class="bg-background py-16">
+    <div class="container px-6 mx-auto">
+        <h1 class="text-3xl font-bold text-center capitalize lg:text-4xl text-text">
+            Featured Engagements & Media
         </h1>
 
-        <p class="mt-4 text-center text-offset">
-            Discover my range of projects that highlight my expertise in design, development, and innovative solutions.
+        <p class="mt-4 text-center text-offset max-w-2xl mx-auto">
+            A showcase of key media appearances, strategic consulting projects, and tech-driven initiatives.
         </p>
 
-        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+        <div class="grid grid-cols-1 gap-12 mt-12 xl:mt-16 md:grid-cols-2">
             {projects.map(project => (
-                <Project
-                    imageUrl={project.imageUrl}
-                    title={project.title}
-                    type={project.type}
-                    link={project.link}
-                />
+                <div class="flex flex-col space-y-4">
+                    {project.type === "YouTube Video" ? (
+                        <YouTubeEmbed id={project.id} title={project.title} />
+                    ) : (
+                        <Project
+                            imageUrl={project.imageUrl}
+                            title={project.title}
+                            type={project.type}
+                            link={project.link}
+                        />
+                    )}
+                    <div class="px-2">
+                        <h3 class="text-xl font-bold text-text">{project.title}</h3>
+                        <p class="text-primary font-semibold tracking-wide uppercase text-sm mt-1">{project.type}</p>
+                    </div>
+                </div>
             ))}
         </div>
     </div>

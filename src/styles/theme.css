@@ -1,19 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=PT+Sans:wght@400;700&display=swap');
+
+html {
+    font-size: 18px;
+    font-family: 'PT Sans', 'FreeSans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Serif', 'FreeSerif', serif;
+}
+
 [data-theme="light"] {
-    --color-primary: theme("colors.blue.700");
-    --color-secondary: theme("colors.blue.600");
-    --color-text: theme("colors.gray.900");
-    --color-text-offset: theme("colors.gray.600");
-    --color-background: theme("colors.gray.50");
-    --color-background-offset: theme("colors.gray.100");
-    --color-border: theme("colors.gray.900" / 10%);
+    --color-primary: #2d4a2b; /* Forest Green */
+    --color-secondary: #7d8471; /* Sage */
+    --color-text: #2c332b; /* Dark Greenish Gray */
+    --color-text-offset: #5a6b57; /* Muted Green */
+    --color-background: #faf9f6; /* Ivory */
+    --color-background-offset: #f0f2eb; /* Soft Greenish White */
+    --color-border: #2d4a2b22;
 }
 
 [data-theme="dark"] {
-    --color-primary: theme("colors.blue.600");
-    --color-secondary: theme("colors.blue.500");
-    --color-text: theme("colors.gray.50");
-    --color-text-offset: theme("colors.gray.400");
-    --color-background: theme("colors.gray.900");
-    --color-background-offset: theme("colors.gray.800");
-    --color-border: theme("colors.gray.50" / 10%);
+    --color-primary: #a4ac86; /* Olive */
+    --color-secondary: #7d8471; /* Sage */
+    --color-text: #faf9f6; /* Ivory */
+    --color-text-offset: #d3d8c8; /* Light Sage */
+    --color-background: #1a2319; /* Very Deep Forest */
+    --color-background-offset: #253324; /* Deep Forest */
+    --color-border: #a4ac8633; /* Olive Border */
 }

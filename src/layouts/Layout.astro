@@ -29,20 +29,11 @@ const { title } = Astro.props;
 			if (themeSaved) {
 				document.documentElement.dataset.theme = themeSaved;
 			} else {
-				const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-				document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+				const utcHour = new Date().getUTCHours();
+				const hourInGMT8 = (utcHour + 8) % 24;
+				const isDaytime = hourInGMT8 >= 6 && hourInGMT8 < 18;
+				document.documentElement.dataset.theme = isDaytime ? "light" : "dark";
 			}
-
-			window
-				.matchMedia("(prefers-color-scheme: dark)")
-				.addEventListener("change", (event) => {
-					if (!localStorage.getItem("theme")) {
-						document.documentElement.dataset.theme = event.matches
-							? "dark"
-							: "light";
-					}
-				});
 		</script>
 	</head>
 	<body class="h-full flex flex-col overflow-x-hidden bg-default

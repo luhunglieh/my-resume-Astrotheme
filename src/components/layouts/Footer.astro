@@ -8,7 +8,7 @@ import { menuItems, socialLinks } from "../../config/cv.json";
         <div class="text-center xl:flex xl:items-center xl:justify-between xl:text-left">
             <div class="xl:flex xl:items-center xl:justify-start">
                 <p class="mt-5 text-sm xl:ml-6 xl:mt-0">
-                    © 2024 Paul Smith. All Rights Reserved.
+                    © Henry Lu 版權所有
                 </p>
             </div>
 
@@ -27,11 +27,8 @@ import { menuItems, socialLinks } from "../../config/cv.json";
 
                 <ul class="flex items-center justify-center space-x-8 xl:justify-end">
                     {socialLinks.map(social => (
-                        <li>
-                            <a href={social.link} title={social.iconName} target="_blank" rel="noopener noreferrer"
-                               class="block transition-all duration-300 hover:text-offset focus:text-offset">
-                                <Icon name={social.iconName} />
-                            </a>
+                        <li title={social.iconName} class="block text-offset opacity-80 cursor-default">
+                            <Icon name={social.iconName} />
                         </li>
                     ))}
                 </ul>

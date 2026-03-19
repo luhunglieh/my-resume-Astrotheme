@@ -1,0 +1,6 @@
+---
+import CardListSection from "./CardListSection.astro";
+import { affairs } from '../../../config/cv.json';
+---
+
+{affairs && <CardListSection title="受邀參與事務" items={affairs} />}

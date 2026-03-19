@@ -1,0 +1,15 @@
+---
+const { id, title } = Astro.props;
+---
+
+<div class="relative w-full aspect-video rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(32,201,151,0.15)] border border-primary/20 bg-background-offset group transition-all duration-500 hover:shadow-[0_20px_60px_rgba(32,201,151,0.3)]">
+  <iframe
+    class="absolute inset-0 w-full h-full"
+    src={`https://www.youtube.com/embed/${id}`}
+    title={title}
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+  <div class="absolute inset-0 pointer-events-none border border-white/5 rounded-3xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]"></div>
+</div>

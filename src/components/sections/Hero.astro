@@ -4,37 +4,37 @@ import heroImage from '../../assets/paul_smith.png';
 import { basic } from '../../config/cv.json';
 ---
 
-<section class="py-5 px-4 sm:py-10 lg:py-16">
-    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+<section class="relative py-12 px-4 sm:py-20 lg:py-24 overflow-hidden bg-background">
+    <!-- Maritime Background Decoration -->
+    <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-10">
         <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
-            <div class="relative flex justify-center">
-                <Image class="w-full md:max-w-md lg:max-w-md"
+            <div class="relative flex justify-center group pointer-events-none">
+                <Image class="relative w-full md:max-w-md lg:max-w-md drop-shadow-[0_0_30px_rgba(0,255,255,0.15)] pointer-events-auto transition-transform duration-700 hover:scale-[1.02]"
                     src={heroImage}
                     loading="eager"
-                    alt="Astro Resume Theme - Paul Smith" />
+                    alt="Henry Lu" />
             </div>
-            <div>
-                <p class="text-lg text-offset">
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                <span class="px-4 py-1 rounded-full bg-primary/10 text-primary text-lg tracking-widest uppercase border border-primary/20">
                     {basic?.job}
-                </p>
+                </span>
 
-                <h1 class="text-2xl font-bold sm:text-4xl lg:text-5xl mt-3">
+                <h1 class="text-3xl font-extrabold sm:text-5xl lg:text-6xl mt-6 tracking-tight text-text font-sans">
                     {basic?.name}
                 </h1>
 
-                <p class="mt-5 text-base sm:text-xl">
+                <p class="mt-8 text-lg sm:text-xl text-offset max-w-xl leading-relaxed whitespace-pre-line">
                     {basic?.summary}
                 </p>
 
-                <div class="mt-10 sm:flex sm:items-center sm:space-x-8">
-                    <a href=`/cv/${basic?.cv_file_name}` title="Download CV" download
-                        class="inline-flex items-center justify-center px-10 py-4 text-base text-white
-                            font-semibold transition-all duration-200 rounded
-                            bg-primary hover:bg-secondary focus:bg-secondary" role="button">
-                        Download CV
-                    </a>
+                <div class="mt-10 flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <div class="inline-flex items-center px-6 py-3 rounded-xl bg-secondary text-background font-bold shadow-lg shadow-secondary/20 hover:shadow-secondary/40 transition-all">
+                        IT 資訊技術專業與高階管理經驗超過 20 年
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
