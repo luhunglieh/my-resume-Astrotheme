@@ -14,7 +14,7 @@ const { title, sub_title, years, details, youtubeId, alignRight, stretchCards, r
   </div>
   {details && (
     <ul class="mt-4 space-y-2">
-      {details.split('\n').filter(line => line.trim()).map(line => (
+      {details.split('\n').filter((line: string) => line.trim()).map((line: string) => (
         <li class="flex items-start gap-2 text-offset leading-relaxed">
           <span class="text-primary mt-1.5 shrink-0">
             <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
