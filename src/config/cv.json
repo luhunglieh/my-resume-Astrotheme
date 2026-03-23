@@ -81,10 +81,6 @@
         {
             "name": "關於我",
             "link": "/"
-        },
-        {
-            "name": "Blog",
-            "link": "/blogs"
         }
     ],
     "socialLinks": [
