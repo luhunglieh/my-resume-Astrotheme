@@ -6,7 +6,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: "https://luhunglieh.github.io",
-  base: "/my-resume-Astrotheme",
+  site: "https://dg.scanallgoods.com",
+  base: "/",
   integrations: [tailwind(), icon(), mdx(), sitemap()]
 });
