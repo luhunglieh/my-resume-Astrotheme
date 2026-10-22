@@ -2,7 +2,13 @@
   "name": "astro-resume-theme",
   "type": "module",
   "version": "1.0.3",
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
+    "postinstall": "node scripts/enforce-node24.mjs",
+    "prebuild": "node scripts/enforce-node24.mjs",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",

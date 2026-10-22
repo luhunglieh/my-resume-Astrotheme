@@ -7,10 +7,7 @@ Astro Resume Theme is a fully customizable and responsive template, built to hel
 You can bootstrap a new Astro project using the following command:
 
 ```bash
-# Bun
-bun create astro@latest --template wasutz/astro-resume-theme
-
-# npm 7+
+# npm 10+ (Node 24 Active LTS)
 npm create astro@latest -- --template wasutz/astro-resume-theme
 
 # pnpm
@@ -30,19 +27,23 @@ yarn create astro --template wasutz/astro-resume-theme
 - Excellent Lighthouse/PageSpeed scores
 - SEO-friendly
 
+## 🛡️ Runtime Requirement (資安環境要求)
+
+- **Node.js**: `>= 24.0.0` (Active LTS)
+- **說明**: 本專案已全面棄用舊版 Node 18 與 Node 20 — Node 20 已 EOL（Node 20 於 2026-04-30 終止支援）。本地開發與 CI/CD 建置統一使用 `npm` 與 `package-lock.json`。
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
-(Could be use 'npm' instead of bun)
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun run dev`             | Starts local dev server at `localhost:4321`      |
-| `bun run build`           | Build your production site to `./dist/`          |
-| `bun run preview`         | Preview your build locally, before deploying     |
-| `bun run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun run astro -- --help` | Get help using the Astro CLI                     |
+| `npm ci` / `npm install`  | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
 # Getting Started
 
@@ -61,8 +62,8 @@ Put your cv file in `src/public/cv` and then replace the file name in `src/confi
 5) Run the project locally
 Once you’ve made your customizations, run the development server:
 
-```
-bun run dev
+```bash
+npm run dev
 ```
 
 Open http://localhost:4321 in your browser to view the result 🚀
