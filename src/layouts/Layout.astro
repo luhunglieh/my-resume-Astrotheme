@@ -6,17 +6,20 @@ import '../styles/index.css';
 
 interface Props {
 	title: string;
+	description?: string;
+	noindex?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, description = "Henry Lu (Paul Smith) 專業個人履歷與作品集網站，涵蓋資訊長 (CIO)、系統架構、公益專案與全方位技術領導力展示。", noindex = false } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="h-full" data-theme="light">
+<html lang="zh-Hant" class="h-full" data-theme="light">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 		<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />

@@ -1,0 +1,25 @@
+# ====================================================================
+# my-resume-Astrotheme Workspace Ignore (.geminiignore)
+# Antigravity 2.0 Token Optimization & Search Isolation
+# ====================================================================
+
+# 1. Astro / Vite Compiled Output & Cache (避免全域搜尋雙重讀取)
+dist/
+dist/**/*
+.astro/
+.astro/**/*
+
+# 2. Dependencies & Lock Files
+node_modules/
+package-lock.json
+
+# 3. Heavy Assets & Binaries (大型二進位檔與歷史圖檔)
+src/assets/paul_smith-old*.png
+public/cv/*.pdf
+
+# 4. Logs, Temp & Conversation Brain
+*.log
+*.tmp
+logs/
+scratch/
+brain/

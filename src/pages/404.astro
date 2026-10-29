@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import NotFound from '../components/layouts/NotFound.astro';
 ---
 
-<Layout title="Page Not Found">
+<Layout
+	title="404 - 找不到頁面 | Page Not Found"
+	description="很抱歉，您所尋找的頁面不存在、已被移除或暫時無法使用。"
+	noindex={true}
+>
 	<NotFound />
 </Layout>

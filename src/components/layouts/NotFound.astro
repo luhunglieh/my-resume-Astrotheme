@@ -1,12 +1,37 @@
-<section class="bg-background  min-h-full  flex items-center">
-    <div class="flex flex-col items-center max-w-sm mx-auto text-center">
-        <h1 class="mt-3 text-2xl font-semibold md:text-3xl">Page not found</h1>
-        <p class="mt-4 text-offset">The page you are looking for doesn't exist.</p>
+---
+// 404 Not Found Component
+---
 
-        <a href="/">
-            <button class="mt-5 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 rounded-lg shrink-0 sm:w-auto bg-primary hover:bg-secondary">
-                Take me home
+<section class="bg-background min-h-[70vh] flex items-center justify-center px-4 py-16">
+    <div class="flex flex-col items-center max-w-lg mx-auto text-center">
+        <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 text-primary mb-6 ring-8 ring-primary/5">
+            <span class="text-4xl font-extrabold tracking-wider font-mono">404</span>
+        </div>
+        
+        <h1 class="text-3xl font-bold tracking-tight text-default sm:text-4xl">
+            頁面不存在
+        </h1>
+        <p class="text-sm font-medium text-primary mt-1 uppercase tracking-widest">
+            Page Not Found
+        </p>
+
+        <p class="mt-4 text-offset text-base max-w-md">
+            您嘗試存取的頁面可能已被移除、名稱已變更，或暫時無法使用。請確認網址是否正確，或返回首頁繼續瀏覽。
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 w-full justify-center">
+            <a href="/" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white transition-all duration-200 rounded-lg bg-primary hover:bg-secondary shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                返回個人首頁 (Home)
+            </a>
+            <button onclick="window.history.back()" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-default transition-all duration-200 rounded-lg bg-background border border-offset/20 hover:bg-offset/10 focus:outline-none">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                回上一頁 (Back)
             </button>
-        </a>
+        </div>
     </div>
 </section>
