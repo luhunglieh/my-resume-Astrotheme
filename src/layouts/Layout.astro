@@ -58,18 +58,11 @@ const { title, description = "Henry Lu (Paul Smith) 專業個人履歷與作品�
 			gtag('config', 'G-9NFMSHCDD9');
 		</script>
 
-		<!-- initialize theme -->
+		<!-- initialize theme (Auto switch 6:00-18:00 based on local time) -->
 		<script is:inline>
-			const themeSaved = localStorage.getItem("theme");
-
-			if (themeSaved) {
-				document.documentElement.dataset.theme = themeSaved;
-			} else {
-				const utcHour = new Date().getUTCHours();
-				const hourInGMT8 = (utcHour + 8) % 24;
-				const isDaytime = hourInGMT8 >= 6 && hourInGMT8 < 18;
-				document.documentElement.dataset.theme = isDaytime ? "light" : "dark";
-			}
+			const currentHour = new Date().getHours();
+			const isDaytime = currentHour >= 6 && currentHour < 18;
+			document.documentElement.dataset.theme = isDaytime ? "light" : "dark";
 		</script>
 	</head>
 	<body class="h-full flex flex-col overflow-x-hidden bg-default
