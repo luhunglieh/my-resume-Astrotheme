@@ -1,5 +1,20 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://dg.scanallgoods.com/sitemap-index.xml
 Sitemap: https://dg.scanallgoods.com/sitemap.xml

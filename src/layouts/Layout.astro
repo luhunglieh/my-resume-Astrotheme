@@ -10,7 +10,85 @@ interface Props {
 	noindex?: boolean;
 }
 
-const { title, description = "Henry Lu (Paul Smith) 專業個人履歷與作品集網站，涵蓋資訊長 (CIO)、系統架構、公益專案與全方位技術領導力展示。", noindex = false } = Astro.props;
+const { 
+	title, 
+	description = "呂鴻烈 (Henry Lu) - 端詳互動資訊總監、臺北市人工智慧產業工會理事長。專注於 AI 落地應用、數據分析、企業數位轉型與資深 CIO 資訊治理（曾任遊戲橘子資深資訊經理）。", 
+	noindex = false 
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://dg.scanallgoods.com").href;
+
+// 構建頂級 AEO / GEO 結構化數據 (Schema.org)
+const schemaData = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "ProfilePage",
+			"@id": "https://dg.scanallgoods.com/#profilepage",
+			"url": "https://dg.scanallgoods.com/",
+			"name": "呂鴻烈 (Henry Lu) - 專業履歷與作品集",
+			"description": description,
+			"isPartOf": {
+				"@type": "WebSite",
+				"@id": "https://dg.scanallgoods.com/#website",
+				"url": "https://dg.scanallgoods.com/",
+				"name": "Henry Lu | 端詳互動資訊總監",
+				"inLanguage": "zh-TW"
+			},
+			"mainEntity": {
+				"@type": "Person",
+				"@id": "https://dg.scanallgoods.com/#person",
+				"name": "呂鴻烈",
+				"alternateName": ["Henry Lu", "Paul Smith"],
+				"jobTitle": "總監 / 理事長",
+				"description": "端詳互動資訊總監，專注於資訊服務、AI 應用規劃與數據分析；臺北市人工智慧產業工會理事長；曾任遊戲橘子(6180)資深資訊經理逾10年。",
+				"image": "https://dg.scanallgoods.com/favicon-512.png",
+				"url": "https://dg.scanallgoods.com/",
+				"worksFor": [
+					{
+						"@type": "Organization",
+						"name": "端詳互動資訊",
+						"url": "https://www.scanallgoods.com/"
+					},
+					{
+						"@type": "Organization",
+						"name": "臺北市人工智慧產業工會"
+					}
+				],
+				"alumniOf": [
+					{
+						"@type": "CollegeOrUniversity",
+						"name": "國立臺灣大學",
+						"department": "土木研究所 數值計算組"
+					},
+					{
+						"@type": "CollegeOrUniversity",
+						"name": "國立臺灣大學",
+						"department": "MBA 碩士學分班"
+					}
+				],
+				"hasCredential": [
+					{ "@type": "EducationalOccupationalCredential", "name": "ISO 27001 Lead Auditor" },
+					{ "@type": "EducationalOccupationalCredential", "name": "CISSP" },
+					{ "@type": "EducationalOccupationalCredential", "name": "ITIL" }
+				],
+				"knowsAbout": [
+					"人工智慧 (Artificial Intelligence)",
+					"AI 落地應用規劃",
+					"企業數位轉型 (Digital Transformation)",
+					"資訊長治理 (CIO IT Governance)",
+					"資訊安全管理 (Information Security)",
+					"大數據分析 (Big Data Analytics)",
+					"ERP 與商業智慧 (ERP & BI)"
+				],
+				"sameAs": [
+					"https://www.scanallgoods.com/",
+					"https://www.youtube.com/watch?v=LfV4yVY2dUY"
+				]
+			}
+		}
+	]
+};
 ---
 
 <!doctype html>
@@ -27,6 +105,32 @@ const { title, description = "Henry Lu (Paul Smith) 專業個人履歷與作品�
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- SEO Canonical & Search Metadata -->
+		<link rel="canonical" href={canonicalURL} />
+		<meta name="author" content="呂鴻烈 (Henry Lu)" />
+		<meta name="keywords" content="呂鴻烈, Henry Lu, 端詳互動資訊, 臺北市人工智慧產業工會, 人工智慧, AI落地應用, 數位轉型, CIO, 遊戲橘子, 資安顧問, ISO27001, CISSP" />
+
+		<!-- Open Graph Protocol (Facebook, LINE, AI Crawlers) -->
+		<meta property="og:type" content="profile" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:site_name" content="Henry Lu | 端詳互動資訊總監" />
+		<meta property="og:locale" content="zh_TW" />
+		<meta property="og:image" content="https://dg.scanallgoods.com/favicon-512.png" />
+		<meta property="og:image:width" content="512" />
+		<meta property="og:image:height" content="512" />
+		<meta property="og:image:alt" content="呂鴻烈 (Henry Lu) 識別標誌" />
+
+		<!-- Twitter Card Protocol -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="https://dg.scanallgoods.com/favicon-512.png" />
+
+		<!-- AEO / GEO AI Search Engine Optimization (JSON-LD Schema Graph) -->
+		<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 
 		<!-- Security & Privacy Baseline (CSP & Anti-Clickjacking Defense) -->
 		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; font-src 'self' data:; connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self';" />
