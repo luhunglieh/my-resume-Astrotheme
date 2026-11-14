@@ -1,0 +1,33 @@
+# ====================================================================
+# Cloudflare Workers Static Assets 邊緣上傳過濾防線 (.assetsignore)
+# 確保 Cloudflare Edge 僅接收純網頁靜態資源，阻絕非必要檔案、Source Map 與遺留設定檔
+# ====================================================================
+*.map
+*.pdf
+*.md
+*.ts
+*.tsx
+*.astro
+*.py
+*.bat
+*.sh
+*.ps1
+*.jsonc
+*.jsonl
+*.log
+*.yml
+*.yaml
+.env*
+.dev.vars*
+.git*
+.DS_Store
+Thumbs.db
+desktop.ini
+CNAME
+LICENSE
+README*
+netlify.toml
+wrangler.jsonc
+package.json
+package-lock.json
+tsconfig.json
